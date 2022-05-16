@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainViewController: UIViewController {
 
@@ -35,29 +36,5 @@ class MainViewController: UIViewController {
         tabBarController.setViewControllers([vc1, vc2, vc3], animated: true)
         tabBarController.modalPresentationStyle = .fullScreen
         present(tabBarController, animated: true)
-    }
-}
-
-class FirstViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "First"
-    }
-}
-
-class SecondViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Second"
-    }
-}
-
-class ThirdViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Third"
     }
 }

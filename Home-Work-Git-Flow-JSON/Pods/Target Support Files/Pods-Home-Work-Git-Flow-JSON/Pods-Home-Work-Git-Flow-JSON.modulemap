@@ -1,0 +1,6 @@
+framework module Pods_Home_Work_Git_Flow_JSON {
+  umbrella header "Pods-Home-Work-Git-Flow-JSON-umbrella.h"
+
+  export *
+  module * { export * }
+}
