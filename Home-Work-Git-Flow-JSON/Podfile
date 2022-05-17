@@ -7,5 +7,6 @@ target 'Home-Work-Git-Flow-JSON' do
 
   # Pods for Home-Work-Git-Flow-JSON
   pod 'SnapKit', '~> 5.0.1'
+  pod 'Alamofire', '~> 5.4'
 
 end

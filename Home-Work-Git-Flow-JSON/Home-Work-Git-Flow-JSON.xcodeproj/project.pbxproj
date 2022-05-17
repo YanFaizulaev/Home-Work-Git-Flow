@@ -21,6 +21,8 @@
 		CE715492283287DA007F4B91 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE715491283287DA007F4B91 /* ThirdViewController.swift */; };
 		CE71549428328EF2007F4B91 /* FirstViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71549328328EF2007F4B91 /* FirstViewControllerCell.swift */; };
 		CE71549628328F3B007F4B91 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71549528328F3B007F4B91 /* ModelCell.swift */; };
+		CE71549C2832CDAF007F4B91 /* PostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71549B2832CDAF007F4B91 /* PostJSON.swift */; };
+		CE71549E2832CE23007F4B91 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71549D2832CE23007F4B91 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		CE715491283287DA007F4B91 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		CE71549328328EF2007F4B91 /* FirstViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerCell.swift; sourceTree = "<group>"; };
 		CE71549528328F3B007F4B91 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
+		CE71549B2832CDAF007F4B91 /* PostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJSON.swift; sourceTree = "<group>"; };
+		CE71549D2832CE23007F4B91 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DE263171F950B7D4131F3C25 /* Pods-Home-Work-Git-Flow-JSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home-Work-Git-Flow-JSON.release.xcconfig"; path = "Target Support Files/Pods-Home-Work-Git-Flow-JSON/Pods-Home-Work-Git-Flow-JSON.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				CE71548F283287B3007F4B91 /* SecondViewController.swift */,
+				CE71549B2832CDAF007F4B91 /* PostJSON.swift */,
+				CE71549D2832CE23007F4B91 /* Item.swift */,
 			);
 			path = SecondModule;
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 				CE71549428328EF2007F4B91 /* FirstViewControllerCell.swift in Sources */,
 				CE715492283287DA007F4B91 /* ThirdViewController.swift in Sources */,
 				CE71549628328F3B007F4B91 /* ModelCell.swift in Sources */,
+				CE71549E2832CE23007F4B91 /* Item.swift in Sources */,
 				CE71548D28328775007F4B91 /* ModelJSON.swift in Sources */,
 				CE715489283286A6007F4B91 /* FirstViewController.swift in Sources */,
+				CE71549C2832CDAF007F4B91 /* PostJSON.swift in Sources */,
 				CE71546028324DE0007F4B91 /* MainViewController.swift in Sources */,
 				CE71545C28324DE0007F4B91 /* AppDelegate.swift in Sources */,
 				CE71545E28324DE0007F4B91 /* SceneDelegate.swift in Sources */,
