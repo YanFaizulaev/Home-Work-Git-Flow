@@ -33,7 +33,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         view.addSubview(activityIndicator)
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
         tableView.backgroundColor = .white
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -45,9 +45,9 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     }
     // MARK: - Работа с запросом с сервара
     
-        var results: [Result] = []
+    private var results: [Results] = []
         
-        func loadImage(urlString: String) -> UIImage? {
+    private func loadImage(urlString: String) -> UIImage? {
             guard
                 let url = URL(string: urlString),
                 let data = try? Data(contentsOf: url)
@@ -59,7 +59,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             return UIImage(data: data)
         }
         
-        func loadContents(query: String) {
+    private func loadContents(query: String) {
             let urlString = "https://imdb-api.com/en/API/Search/k_w7db8734/\(query)"
             guard let url = URL(string: urlString) else {
                 return
@@ -102,18 +102,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     
     private let searchBar = UISearchBar()
     
-    @objc func handleShowSearchBar() {
-        searchBar.becomeFirstResponder()
-        search(shouldShow: true)
-    }
-    
-    func search(shouldShow: Bool) {
-        showSearchBarButton(shouldShow: !shouldShow)
-        searchBar.showsCancelButton = shouldShow
-        navigationItem.titleView = shouldShow ? searchBar : nil
-    }
-    
-    func configureUI() {
+    private func configureUI() {
         searchBar.sizeToFit()
         searchBar.delegate = self
         
@@ -130,7 +119,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         showSearchBarButton(shouldShow: true)
     }
     
-    func showSearchBarButton(shouldShow: Bool) {
+    private func showSearchBarButton(shouldShow: Bool) {
         if shouldShow {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
                                                                 target: self,
@@ -138,6 +127,17 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         } else {
             navigationItem.rightBarButtonItem = nil
         }
+    }
+    
+    @objc func handleShowSearchBar() {
+        searchBar.becomeFirstResponder()
+        search(shouldShow: true)
+    }
+    
+    private func search(shouldShow: Bool) {
+        showSearchBarButton(shouldShow: !shouldShow)
+        searchBar.showsCancelButton = shouldShow
+        navigationItem.titleView = shouldShow ? searchBar : nil
     }
 }
     // MARK: - Работа с расширениями

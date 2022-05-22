@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
         vc3.title = "Third"
         
 //        guard let items = tabBarController.tabBar.items else { return }
-//        let images = ["house", "house", "house"]
+//        let images = ["square.and.arrow.up", "square.and.arrow.up", "square.and.arrow.up"]
 //        for i in 0..<items.count {
 //            items[i].image = UIImage(systemName: images[i])
 //        }
