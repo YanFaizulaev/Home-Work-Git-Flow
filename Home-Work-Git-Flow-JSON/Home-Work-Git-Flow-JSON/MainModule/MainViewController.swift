@@ -6,35 +6,72 @@
 //
 
 import UIKit
-import SnapKit
 
-class MainViewController: UIViewController {
+class MainViewController: UITabBarController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setTabBarController()
-    }
-
-    func setTabBarController () {
-        
-        let tabBarController = UITabBarController()
-        
-        let vc1 = UINavigationController(rootViewController: FirstViewController())
-        let vc2 = UINavigationController(rootViewController: SecondViewController())
-        let vc3 = UINavigationController(rootViewController: ThirdViewController())
-        
-        vc1.title = "First"
-        vc2.title = "Second"
-        vc3.title = "Third"
-        
-//        guard let items = tabBarController.tabBar.items else { return }
-//        let images = ["square.and.arrow.up", "square.and.arrow.up", "square.and.arrow.up"]
-//        for i in 0..<items.count {
-//            items[i].image = UIImage(systemName: images[i])
-//        }
-        
-        tabBarController.setViewControllers([vc1, vc2, vc3], animated: true)
-        tabBarController.modalPresentationStyle = .fullScreen
-        present(tabBarController, animated: true)
-    }
+   override func viewDidLoad() {
+    super.viewDidLoad()
+    self.setupTabBar()
 }
+
+    private enum TabBarItem: Int {
+        case film
+        case post
+        case comment
+        
+        var title: String {
+                switch self {
+                    case .film:
+                        return "Фильмы"
+                    case .post:
+                        return "POST"
+                    case .comment:
+                        return "Комментарии"
+                    }
+        }
+        
+        var iconName: String {
+                    switch self {
+                    case .film:
+                        return "film"
+                    case .post:
+                        return "signpost.right"
+                    case .comment:
+                        return "theatermasks"
+                    }
+        }
+    }
+    
+    private func setupTabBar() {
+        let dataSource: [TabBarItem] = [.film, .post, .comment]
+        self.viewControllers = dataSource.map {
+            switch $0 {
+                case .film:
+                    let feedViewController = FirstViewController()
+                    return self.wrappedInNavigationController(with: feedViewController, title: $0.title)
+                case .post:
+                    let profileViewController = SecondViewController()
+                    return self.wrappedInNavigationController(with: profileViewController, title: $0.title)
+                case .comment:
+                    let profileViewController = ThirdViewController()
+                    return self.wrappedInNavigationController(with: profileViewController, title: $0.title)
+            }
+        }
+            self.viewControllers?.enumerated().forEach {
+                $1.tabBarItem.title = dataSource[$0].title
+                $1.tabBarItem.image = UIImage(systemName: dataSource[$0].iconName)
+                $1.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: .zero, bottom: -5, right: .zero)
+                $1.tabBarController?.tabBar.tintColor = Constans.Color.costomBarItem
+                $1.tabBarController?.tabBar.unselectedItemTintColor = Constans.Color.costomBarUnselectedItem
+                $1.tabBarController?.tabBar.backgroundColor = Constans.Color.costomBar
+            }
+    }
+    
+    private func wrappedInNavigationController(with: UIViewController, title: Any?) -> UINavigationController {
+            return UINavigationController(rootViewController: with)
+        }
+}
+
+
+
+

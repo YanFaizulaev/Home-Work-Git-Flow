@@ -93,7 +93,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     }()
     
     private func configureTableView() {
-        tableView.register(FirstViewControllerCell.self,forCellReuseIdentifier: "idCell")
+        tableView.register(UITableViewCell.self,forCellReuseIdentifier: "idCell")
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -108,14 +108,14 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
         navigationItem.title = "Найди свой фильм"
         let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor(hexString: "03fc1c")]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(hexString: "03fc1c")]
+        appearance.titleTextAttributes = [.foregroundColor: Constans.Color.costomText!]
+        appearance.largeTitleTextAttributes = [.foregroundColor: Constans.Color.costomText!]
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(hexString: "106619")
+        appearance.backgroundColor = Constans.Color.costomBar
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance =  navigationController?.navigationBar.standardAppearance
-        navigationController?.navigationBar.tintColor = UIColor(hexString: "03fc1c")
+        navigationController?.navigationBar.tintColor = Constans.Color.costomText
         showSearchBarButton(shouldShow: true)
     }
     

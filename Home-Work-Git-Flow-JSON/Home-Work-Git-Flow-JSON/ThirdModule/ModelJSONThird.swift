@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - GetElement
+// MARK: - GetComments
 struct Comments: Codable {
     let postID, id: Int
     let name, email, body: String
@@ -17,15 +17,3 @@ struct Comments: Codable {
         case id, name, email, body
     }
 }
-
-typealias Get = [Comments]
-//   let get = try? newJSONDecoder().decode(Get.self, from: jsonData)
-
-
-//struct Comments: Decodable {
-//    var postId: Int
-//    var id: Int
-//    var name: String
-//    var email: String
-//    var body: String
-//}

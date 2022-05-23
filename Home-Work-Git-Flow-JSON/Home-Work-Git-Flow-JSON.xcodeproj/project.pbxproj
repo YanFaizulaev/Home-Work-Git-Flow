@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		73A7807F16D0B78758555E8D /* Pods_Home_Work_Git_Flow_JSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26588E390E195BD25A24CC52 /* Pods_Home_Work_Git_Flow_JSON.framework */; };
 		CE26F426283A21230052E4C5 /* CustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26F425283A21230052E4C5 /* CustomCellModel.swift */; };
+		CE26F471283B4F170052E4C5 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26F470283B4F170052E4C5 /* Constans.swift */; };
 		CE71545C28324DE0007F4B91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71545B28324DE0007F4B91 /* AppDelegate.swift */; };
 		CE71545E28324DE0007F4B91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71545D28324DE0007F4B91 /* SceneDelegate.swift */; };
 		CE71546028324DE0007F4B91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71545F28324DE0007F4B91 /* MainViewController.swift */; };
@@ -20,8 +21,6 @@
 		CE71548D28328775007F4B91 /* ModelJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71548C28328775007F4B91 /* ModelJSON.swift */; };
 		CE715490283287B3007F4B91 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71548F283287B3007F4B91 /* SecondViewController.swift */; };
 		CE715492283287DA007F4B91 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE715491283287DA007F4B91 /* ThirdViewController.swift */; };
-		CE71549428328EF2007F4B91 /* FirstViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71549328328EF2007F4B91 /* FirstViewControllerCell.swift */; };
-		CE71549628328F3B007F4B91 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71549528328F3B007F4B91 /* ModelCell.swift */; };
 		CE71549C2832CDAF007F4B91 /* PostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71549B2832CDAF007F4B91 /* PostJSON.swift */; };
 		CE71549E2832CE23007F4B91 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71549D2832CE23007F4B91 /* Item.swift */; };
 		CE7154A22833F120007F4B91 /* ModelJSONThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7154A12833F120007F4B91 /* ModelJSONThird.swift */; };
@@ -32,6 +31,7 @@
 		1E5C1C5941EDF4D463EB8940 /* Pods-Home-Work-Git-Flow-JSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home-Work-Git-Flow-JSON.debug.xcconfig"; path = "Target Support Files/Pods-Home-Work-Git-Flow-JSON/Pods-Home-Work-Git-Flow-JSON.debug.xcconfig"; sourceTree = "<group>"; };
 		26588E390E195BD25A24CC52 /* Pods_Home_Work_Git_Flow_JSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home_Work_Git_Flow_JSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE26F425283A21230052E4C5 /* CustomCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellModel.swift; sourceTree = "<group>"; };
+		CE26F470283B4F170052E4C5 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		CE71545828324DE0007F4B91 /* Home-Work-Git-Flow-JSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home-Work-Git-Flow-JSON.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE71545B28324DE0007F4B91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE71545D28324DE0007F4B91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,8 +45,6 @@
 		CE71548C28328775007F4B91 /* ModelJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelJSON.swift; sourceTree = "<group>"; };
 		CE71548F283287B3007F4B91 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CE715491283287DA007F4B91 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		CE71549328328EF2007F4B91 /* FirstViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerCell.swift; sourceTree = "<group>"; };
-		CE71549528328F3B007F4B91 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 		CE71549B2832CDAF007F4B91 /* PostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJSON.swift; sourceTree = "<group>"; };
 		CE71549D2832CE23007F4B91 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CE7154A12833F120007F4B91 /* ModelJSONThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelJSONThird.swift; sourceTree = "<group>"; };
@@ -72,6 +70,15 @@
 				26588E390E195BD25A24CC52 /* Pods_Home_Work_Git_Flow_JSON.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE26F427283A24BA0052E4C5 /* PostModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE71549B2832CDAF007F4B91 /* PostJSON.swift */,
+				CE71549D2832CE23007F4B91 /* Item.swift */,
+			);
+			path = PostModel;
 			sourceTree = "<group>";
 		};
 		CE71544F28324DE0007F4B91 = {
@@ -121,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7154852832865E007F4B91 /* ExtensionUIColor.swift */,
+				CE26F470283B4F170052E4C5 /* Constans.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -129,8 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				CE715488283286A6007F4B91 /* FirstViewController.swift */,
-				CE71549328328EF2007F4B91 /* FirstViewControllerCell.swift */,
-				CE71549528328F3B007F4B91 /* ModelCell.swift */,
 				CE7154822832862A007F4B91 /* NetworkService */,
 			);
 			path = FirstModule;
@@ -148,8 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				CE71548F283287B3007F4B91 /* SecondViewController.swift */,
-				CE71549B2832CDAF007F4B91 /* PostJSON.swift */,
-				CE71549D2832CE23007F4B91 /* Item.swift */,
+				CE26F427283A24BA0052E4C5 /* PostModel */,
 			);
 			path = SecondModule;
 			sourceTree = "<group>";
@@ -299,9 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE715490283287B3007F4B91 /* SecondViewController.swift in Sources */,
-				CE71549428328EF2007F4B91 /* FirstViewControllerCell.swift in Sources */,
 				CE715492283287DA007F4B91 /* ThirdViewController.swift in Sources */,
-				CE71549628328F3B007F4B91 /* ModelCell.swift in Sources */,
 				CE71549E2832CE23007F4B91 /* Item.swift in Sources */,
 				CE71548D28328775007F4B91 /* ModelJSON.swift in Sources */,
 				CE26F426283A21230052E4C5 /* CustomCellModel.swift in Sources */,
@@ -312,6 +315,7 @@
 				CE7154A42833F844007F4B91 /* CustomTableViewCell.swift in Sources */,
 				CE71545C28324DE0007F4B91 /* AppDelegate.swift in Sources */,
 				CE71545E28324DE0007F4B91 /* SceneDelegate.swift in Sources */,
+				CE26F471283B4F170052E4C5 /* Constans.swift in Sources */,
 				CE7154862832865E007F4B91 /* ExtensionUIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
     }
     
     private func setupViews () {
-        view.backgroundColor = UIColor(hexString: "106619")
+        view.backgroundColor = Constans.Color.costomBar
         view.addSubview(stackview)
     }
     
@@ -35,7 +35,7 @@ class SecondViewController: UIViewController {
         var label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.text = "Birth (возраст):"
-        label.textColor = UIColor(hexString: "03fc1c")
+        label.textColor = Constans.Color.costomText
         return label
     }()
     
@@ -64,7 +64,7 @@ class SecondViewController: UIViewController {
         var label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.text = "Occupation (профессия):"
-        label.textColor = UIColor(hexString: "03fc1c")
+        label.textColor = Constans.Color.costomText
         return label
     }()
     
@@ -88,7 +88,7 @@ class SecondViewController: UIViewController {
         var label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.text = "Name (имя):"
-        label.textColor = UIColor(hexString: "03fc1c")
+        label.textColor = Constans.Color.costomText
         return label
     }()
     
@@ -112,7 +112,7 @@ class SecondViewController: UIViewController {
         var label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.text = "Lastname (фамилия):"
-        label.textColor = UIColor(hexString: "03fc1c")
+        label.textColor = Constans.Color.costomText
         return label
     }()
     
@@ -136,7 +136,7 @@ class SecondViewController: UIViewController {
         var label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.text = "Сountry (страна):"
-        label.textColor = UIColor(hexString: "03fc1c")
+        label.textColor = Constans.Color.costomText
         return label
     }()
     
@@ -160,14 +160,14 @@ class SecondViewController: UIViewController {
         var label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.text = "Send request / Отправить запрос"
-        label.textColor = UIColor(hexString: "03fc1c")
+        label.textColor = Constans.Color.costomText
         return label
     }()
     
     private lazy var urlSessionButton: UIButton = {
         var button = UIButton()
         button.setTitle(" URLSession ", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(Constans.Color.costomText, for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
@@ -178,7 +178,7 @@ class SecondViewController: UIViewController {
     private lazy var buttonAlomofile: UIButton = {
         var button = UIButton()
         button.setTitle(" Alamofire ", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(Constans.Color.costomText, for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true

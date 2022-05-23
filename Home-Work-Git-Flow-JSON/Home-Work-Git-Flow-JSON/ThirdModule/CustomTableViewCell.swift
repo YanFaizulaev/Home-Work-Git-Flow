@@ -9,6 +9,24 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
+    private lazy var labelName: UILabel = {
+        let lable = UILabel()
+        lable.text = "Тема :"
+        return lable
+    }()
+    
+    private lazy var labelEmails: UILabel = {
+        let lable = UILabel()
+        lable.text = "Почта :"
+        return lable
+    }()
+    
+    private lazy var labelMessages: UILabel = {
+        let lable = UILabel()
+        lable.text = "Сообщение :"
+        return lable
+    }()
+    
     lazy var labelUserName: UILabel = {
         let lable = UILabel()
         return lable
@@ -21,6 +39,7 @@ class CustomTableViewCell: UITableViewCell {
     
     lazy var labelMessage: UILabel = {
         let lable = UILabel()
+        lable.numberOfLines = 0
         return lable
     }()
     
@@ -29,8 +48,11 @@ class CustomTableViewCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.spacing = 20
+        stackView.addArrangedSubview(labelName)
         stackView.addArrangedSubview(labelUserName)
+        stackView.addArrangedSubview(labelEmails)
         stackView.addArrangedSubview(labelEmail)
+        stackView.addArrangedSubview(labelMessages)
         stackView.addArrangedSubview(labelMessage)
         return stackView
     }()
@@ -47,56 +69,41 @@ class CustomTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
 }
 
-    func configure(_ viewModel: CustomCellModel) {
+    private func configure(_ viewModel: CustomCellModel) {
         labelUserName.text = viewModel.labelUserName
         labelEmail.text = viewModel.labelEmail
         labelMessage.text = viewModel.labelMessage
     }
 
     private func setupConstraints () {
-        stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20).isActive = true
-        stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
+        stackView.snp.makeConstraints { (make)-> Void in
+            make.leading.equalToSuperview().offset(18.0)
+            make.top.equalToSuperview().offset(0.0)
+            make.bottom.equalToSuperview().offset(0.0)
+            make.trailing.equalToSuperview().offset(-18.0)
         }
-    
-    
-    
-    
-    
-//
-//    let imgUser = UIImageView()
-//    let labelUserName = UILabel()
-//    let labelEmail = UILabel()
-//    let labelMessage = UILabel()
-//
-//
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//
-//        imgUser.backgroundColor = UIColor.green
-//
-//        imgUser.translatesAutoresizingMaskIntoConstraints = false
-//        labelUserName.translatesAutoresizingMaskIntoConstraints = false
-//        labelEmail.translatesAutoresizingMaskIntoConstraints = false
-//        labelMessage.translatesAutoresizingMaskIntoConstraints = false
-//
-//        contentView.addSubview(imgUser)
-//        contentView.addSubview(labelUserName)
-//        contentView.addSubview(labelEmail)
-//        contentView.addSubview(labelMessage)
-//
-//        let viewsDict = [
-//            "image": imgUser,
-//            "username": labelUserName,
-//            "labTime": labelEmail,
-//            "message": labelMessage
-//        ]
-//
-//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image(10)]", options: [], metrics: nil, views: viewsDict))
-//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[labTime]-|", options: [], metrics: nil, views: viewsDict))
-//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[username]-[message]-|", options: [], metrics: nil, views: viewsDict))
-//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[username]-[image(10)]-|", options: [], metrics: nil, views: viewsDict))
-//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[message]-[labTime]-|", options: [], metrics: nil, views: viewsDict))
-//    }
+        labelName.snp.makeConstraints { (make)-> Void in
+            make.leading.equalTo(stackView.snp.leading).offset(0.0)
+        }
+        labelUserName.snp.makeConstraints { (make)-> Void in
+            make.leading.equalTo(labelName.snp.leading).offset(15.0)
+            make.top.equalTo(labelName.snp.bottom).offset(0.0)
+        }
+        labelEmails.snp.makeConstraints { (make)-> Void in
+            make.leading.equalTo(labelName.snp.leading).offset(0.0)
+            make.top.equalTo(labelUserName.snp.bottom).offset(0.0)
+        }
+        labelEmail.snp.makeConstraints { (make)-> Void in
+            make.leading.equalTo(labelUserName.snp.leading).offset(0.0)
+            make.top.equalTo(labelEmails.snp.bottom).offset(0.0)
+        }
+        labelMessages.snp.makeConstraints { (make)-> Void in
+            make.leading.equalTo(labelName.snp.leading).offset(0.0)
+            make.top.equalTo(labelEmail.snp.bottom).offset(0.0)
+        }
+        labelMessage.snp.makeConstraints { (make)-> Void in
+            make.leading.equalTo(labelUserName.snp.leading).offset(0.0)
+            make.top.equalTo(labelMessages.snp.bottom).offset(0.0)
+        }
+    }
 }

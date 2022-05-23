@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ThirdViewController: UIViewController, UITableViewDelegate {
     // MARK: - Индикатор загрузки
@@ -68,14 +69,13 @@ class ThirdViewController: UIViewController, UITableViewDelegate {
         
         navigationItem.title = "Комментарии"
         let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor(hexString: "03fc1c")]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(hexString: "03fc1c")]
+        appearance.titleTextAttributes = [.foregroundColor: Constans.Color.costomText!]
+        appearance.largeTitleTextAttributes = [.foregroundColor: Constans.Color.costomText!]
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(hexString: "106619")
-//        navigationController?.navigationBar.prefersLargeTitles = true
+        appearance.backgroundColor = Constans.Color.costomBar
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance =  navigationController?.navigationBar.standardAppearance
-        navigationController?.navigationBar.tintColor = UIColor(hexString: "03fc1c")
+        navigationController?.navigationBar.tintColor = Constans.Color.costomText
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play,
                                                             target: self,
                                                             action: #selector(handleShowSearchBar))
